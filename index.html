@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Overlap Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navigation bar */
+    nav {
+      position: fixed; /* stays at the top */
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #333;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    /* Hero section */
+    .hero {
+      background: lightblue;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    /* Responsive tweak (but missing spacing fix) */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    Navigation Bar
+  </nav>
+
+  <section class="hero">
+    <h1>Hero Heading</h1>
+  </section>
+</body>
+</html>
