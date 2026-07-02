@@ -1,56 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar Overlap Example</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Overlap Example</title>
 
-    /* Navigation bar */
-    nav {
-      position: fixed; /* stays at the top */
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #333;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-    }
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-    /* Hero section */
-    .hero {
-      background: lightblue;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+        /* Navigation bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+        }
 
-    .hero h1 {
-      font-size: 2rem;
-      margin: 0;
-    }
+        /* Welcome message */
+        .welcome {
+            margin-top: 80px;
+            text-align: center;
+            font-size: 1.2rem;
+            color: #333;
+        }
 
-    /* Responsive tweak (but missing spacing fix) */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
+        /* Hero section */
+        .hero {
+            background: lightblue;
+            height: calc(100vh - 80px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
-<body>
-  <nav>
-    Navigation Bar
-  </nav>
 
-  <section class="hero">
-    <h1>Hero Heading</h1>
-  </section>
+<body>
+
+    <nav>
+        Navigation Bar
+    </nav>
+
+    <div class="welcome">
+        <h2>Welcome to my GitHub Demo Project</h2>
+        <p>This change resolves Issue #1.</p>
+    </div>
+
+    <section class="hero">
+        <h1>Hero Heading</h1>
+    </section>
+
 </body>
+
 </html>
